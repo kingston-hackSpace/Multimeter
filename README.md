@@ -14,15 +14,15 @@ More about multimeter: [How to use a multimeter to measure voltage and current i
 It is safe to test Arduino circuits, LEDs, sensors, and batteries, but using it on household mains can be extremely dangerous.
 
 ----
-## TUTORIAL: Workflow
+## Workflow
 
 You’ll mostly use it to troubleshoot problems in your circuit—for example, a sensor that isn’t responding, or an LED that won’t light.
 
 **The typical workflow is:**
 
-1. Use *continuity-testing* to find the specific connection or component causing the problem.
+1. Start with *continuity-testing*.
   
-2. Measure *voltage* to check if the component is receiving power.
+2. Measure *voltage* to check power reception.
 
 3. If all hardware appears fine, the issue may lie in the *code*.
 
@@ -58,7 +58,7 @@ Think of your circuit as a chain: electricity travels from connection to connect
 
 Measuring voltage helps you check whether a component or section of your circuit is receiving power as expected. 
 
-For example: You have performed continuity testing and confirmed that all connections are working properly, however, your sensor/LED/motor still doesn't work. In this case, measuring voltage can show whether the component is receiving the correct power — too much, too little, or none at all.
+*For example:* You have performed continuity testing and confirmed that all connections are working properly, however, your sensor/LED/motor still doesn't work. In this case, measuring voltage can show whether the component is receiving the correct power — too much, too little, or none at all.
 
 
 *Measuring bio-electricity*: In projects that involve bio-electrical sources—such as plants, tomatoes, potatoes, or mushrooms—using a multimeter to measure voltage will help you understand their electrical potential and determine whether it is sufficient to power your components.
@@ -81,12 +81,13 @@ For example: You have performed continuity testing and confirmed that all connec
 - Results:
   - **Correct voltage** → Component is receiving power; check other parts if it still doesn’t work. If the voltage is correct in all parts, you know the problem is elsewhere. Now you can:
         - Replace component. It might be that the component itself is faulty.
-        - Check your code. It might be that the problem is in the code. Start ensuring that pin designations match the wiring you’ve built.
+        - Check your code. It might be that the problem is in the code. Ensure that pin designations match the wiring you’ve built.
     
   - **No or low voltage** → Power isn’t reaching the component. If the voltage is missing or low, the problem is in the power path. Check wiring, connections, or the power source.
  
 
-**Sensor example**
+**Sensor example:**
+
 Testing that a sensor in your circuit is receiving the correct power:
 
 **- Black probe → GND pin of the sensor**
@@ -94,7 +95,7 @@ Testing that a sensor in your circuit is receiving the correct power:
 **- Red probe → VCC pin of the sensor**
 
 - Results:
-    - The display should show close to 5V (if powered from Arduino 5V) or 3.3V (if using 3.3V power). Instead, it shows 0V, then your sensor is not getting the power. Check proper wiring.
+    - The display should show close to 5V (if powered from Arduino 5V) or 3.3V (if using 3.3V power). If it shows 0 V, the sensor is not receiving power. Check proper wiring.
 
    - If the sensor *is* receiving the correct voltage but still doesn’t work, the sensor may be faulty. You should try replacing the sensor and/or checking your code.
  
