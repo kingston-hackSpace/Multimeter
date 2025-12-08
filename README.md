@@ -16,7 +16,7 @@ It is safe to test Arduino circuits, LEDs, sensors, and batteries, but using it 
 ----
 ### When to use it
 
-We will mostly use it to troubleshoot problems with our circuit, such as:
+You will mostly use it to troubleshoot problems with our circuit, such as:
 
 - Check if a component is receiving power
 
@@ -31,7 +31,9 @@ We will mostly use it to troubleshoot problems with our circuit, such as:
 ----
 ### 1. Checking Continuity
 
-When a component isn’t working as expected you can use continuity-testing to check each link in the circuit. Think of your circuit as a chain: electricity travels from connection to connection, and every link must be intact for the circuit to work. For example, point A should be connected to point B—but is it? Let’s check using the multimeter.
+When a component isn’t working as expected you, can use a Multimeter in CONTINUITY MODE to check electrical continuity at each link in your circuit. This helps you locate any broken links that might be causing the problem.
+
+Think of your circuit as a chain: electricity travels from connection to connection, and every link must be intact for the circuit to work. For example, point (A) should be connected to point (B) —but is it? Let’s check using the multimeter.
 
 **Step-by-Step Guide:**
 
@@ -43,13 +45,13 @@ When a component isn’t working as expected you can use continuity-testing to c
 
     - Pick two points that should be connected, e.g., Arduino 5V pin → LED anode.
       
-    - Place the probes: One probe on A, one on B.
+    - Place the probes
       
     - Does it beep?
       
-        - Beep → Connection is complete; electricity can flow
+        - Beep → Connection is complete; electricity can flow. Link is working properly. 
           
-        - No beep → Broken link; check wire, component, breadboard, or solder join
+        - No beep → Broken link. Check wires, component, breadboard, or solder join.
           
   - Move along the chain and test each segment of the circuit. If continuity is correct along the whole path, the problem lies elsewhere.
 
