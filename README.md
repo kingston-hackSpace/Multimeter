@@ -14,22 +14,49 @@ More about multimeter: [How to use a multimeter to measure voltage and current i
 It is safe to test Arduino circuits, LEDs, sensors, and batteries, but using it on household mains can be extremely dangerous.
 
 ----
-### When to use it
+### Why and how to use a multimeter
 
-You will mostly use it to troubleshoot problems with our circuit, such as:
+You’ll mostly use it to troubleshoot problems in your circuit—for example, a sensor that isn’t responding, or an LED that won’t light.
 
-- Check if a component is receiving power
+The typical workflow is:
 
-- Test if wires or connections are continuous
+1. **Measure voltage first** to check if the component is receiving power.
 
-- Detect short circuits before they cause damage
+2. If you are getting incorrect voltage, use **continuity testing** to find the specific connection or component causing the problem.
 
-- Measure voltage or current from batteries, unusual power sources, or sensors
+3. If all hardware appears fine, the issue may lie in the **code**.
 
 ----
-# TUTORIAL
+# TUTORIAL: Testing Voltage
+
+Measuring voltage helps you check whether a component or section of your circuit is receiving power as expected. This is especially useful when an LED, sensor, or motor isn’t working. 
+
+POTATO/PLANT Voltage: You can also use it in experimental projects to measure how much electrical potential these sources produce and whether it’s enough to power your components.
+
+**Step-by-Step Guide:**
+
+- Turn off the power. Always disconnect the Arduino, battery, or power supply before testing.
+
+- Set the multimeter: Turn the dial to **DC Voltage (V—)**.
+
+- Measure the voltage
+  - Start from the power source and move along the circuit to isolate the problem.
+  - The red probe goes to the positive side, black to ground.  
+  - Read the value on the display.  
+  - Compare it with the expected voltage (e.g., 5 V from Arduino, 3 V from a battery).  
+
+- Interpret the result:
+  - **Correct voltage** → component is receiving power; check other parts if it still doesn’t work.  
+  - **No or low voltage** → power isn’t reaching the component; check wiring, connections, or the power source.
+ 
+If the voltage is correct, you know the power supply and the immediate connections are fine — the problem is elsewhere (wiring to signal pins, code, or the component itself).
+
+If the voltage is missing or low, you know the problem is in the power path, and you can then check each connection (continuity) to find the broken link.
+
+
+  - 
 ----
-### 1. Checking Continuity
+# TUTORIAL: Checking Continuity
 
 When a component isn’t working as expected you, can use a Multimeter in CONTINUITY MODE to check electrical continuity at each link in your circuit. This helps you locate any broken links that might be causing the problem.
 
@@ -54,5 +81,8 @@ Think of your circuit as a chain: electricity travels from connection to connect
         - No beep → Broken link. Check wires, component, breadboard, or solder join.
           
   - Move along the chain and test each segment of the circuit. If continuity is correct along the whole path, the problem lies elsewhere.
+
+
+
 
 
